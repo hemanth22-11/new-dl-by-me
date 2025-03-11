@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>DRIVING LICENSE </title>
+<style>
+body{
+height:200uh;
+background-image:url("DL.jpg");
+background-reoeat:repeat-x;
+background-position:50% 50%;
+background-attachment:fixed;
+background-size:cover;
+background-position:center-right;
+}
+</style>
+ <script>
+ function checkEligibility(){
+const name = prompt("Enter your name:");
+const age = parseInt(prompt("Enter your age"));
+const eligibility = age >= 18 ? "Eligible to DL" : "Not eligible to DL";
+const tableHTML = `
+<table border="1" cellpadding="10">
+<tr>
+<th>Name</th>
+<th>Age</th>
+<th>Eligibility</th>
+</tr>
+<tr>
+<td>${name}</td>
+<td>${age}</td>
+<td>${eligibility}</td>
+</tr>
+</table>
+`;
+document.getElementById("DL Table").innerHTML = tableHTML;
+}
+  </script>
+</head>
+<body style="background-color:lightblue";>
+<h1 style="color:red";>DL Eligibility Checker</h1>
+<p>A driving license (also known as a driver's 
+<BR>license) is an official document that permits <BR>a person to operate a motor <BR>vehicle on public roads. 
+<BR>The process and requirements <BR>for obtaining a driving license<BR> can vary depending on the<BR> country or region, but the<BR> general steps are similar.</p>
+<p>you must be at least 18<BR> years old to apply for a full<BR> driving license, although some<BR> places allow provisional <BR>or learner’s licenses <BR>sat 16 or 17.</p>
+<button onclick="checkEligibility()">Check Eligibility</button>
+<div id="DL Table"></div>
+
+</body>
+</html>
